@@ -29,11 +29,12 @@ const Hero = () => {
     const section = sectionRef.current;
     if (!section) return;
     const ctx = gsap.context(() => {
+      const isMobile = window.innerWidth < 1024;
       const scrollTl = gsap.timeline({
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: '+=130%',
+          end: isMobile ? '+=60%' : '+=130%',
           pin: true,
           scrub: 0.5,
           onLeaveBack: () => {
@@ -85,14 +86,12 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Bottom‑left label */}
-      <div className="absolute left-[6vw] bottom-[10vh] z-[3] flex items-center gap-4">
-        <span ref={labelRef} className="label-text">Premium Travel Agency</span>
-        <div ref={lineRef} className="hairline w-[18vw] origin-left" />
-      </div>
-
-      {/* Bottom‑right CTA */}
-      <div className="absolute right-[6vw] bottom-[10vh] z-[3]">
+      {/* Bottom bar - stacks on mobile */}
+      <div className="absolute left-0 right-0 bottom-[6vh] lg:bottom-[10vh] z-[3] flex flex-col items-center gap-4 lg:flex-row lg:justify-between px-6 lg:px-[6vw]">
+        <div className="flex items-center gap-4">
+          <span ref={labelRef} className="label-text">Premium Travel Agency</span>
+          <div ref={lineRef} className="hairline w-[18vw] origin-left hidden lg:block" />
+        </div>
         <button ref={ctaRef} onClick={() => document.querySelector('#inquiry')?.scrollIntoView({ behavior: 'smooth' })}
           className="btn-primary">
           Plan Your Journey

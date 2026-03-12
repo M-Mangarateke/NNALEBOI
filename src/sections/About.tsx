@@ -42,7 +42,7 @@ const About = () => {
       <div className="w-full px-6 lg:px-[6vw]">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-0 items-center">
           {/* Left - content */}
-          <div className="lg:max-w-[44vw] lg:pr-16">
+          <div className="max-w-full lg:max-w-[44vw] lg:pr-16">
             <div className="flex items-center gap-4 mb-8">
               <span ref={labelRef} className="label-text">About NNALEBOI</span>
               <div ref={lineRef} className="hairline w-[8vw] origin-left" />
@@ -52,7 +52,7 @@ const About = () => {
               Travel should feel effortless.
             </h2>
 
-            <div ref={bodyRef} className="text-[#B8B2A6] text-[clamp(14px,1.1vw,17px)] leading-relaxed space-y-5 max-w-[40vw] mb-10">
+            <div ref={bodyRef} className="text-[#B8B2A6] text-base lg:text-[clamp(14px,1.1vw,17px)] leading-relaxed space-y-5 max-w-full lg:max-w-[40vw] mb-10">
               <p>
                 We design journeys that match your rhythm - whether it's a quiet escape, a celebration, or a multi-stop adventure. From flights to final touches, we handle the details so you can be present for the moments that matter.
               </p>

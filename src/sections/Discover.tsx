@@ -18,8 +18,9 @@ const Discover = () => {
     const section = sectionRef.current;
     if (!section) return;
     const ctx = gsap.context(() => {
+      const isMobile = window.innerWidth < 1024;
       const scrollTl = gsap.timeline({
-        scrollTrigger: { trigger: section, start: 'top top', end: '+=130%', pin: true, scrub: 0.5 },
+        scrollTrigger: { trigger: section, start: 'top top', end: isMobile ? '+=60%' : '+=130%', pin: true, scrub: 0.5 },
       });
 
       scrollTl
@@ -63,11 +64,11 @@ const Discover = () => {
       </div>
 
       {/* Centre headline */}
-      <div ref={headlineRef} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] lg:w-[46vw] text-center z-[3]">
-        <h2 className="font-serif text-[clamp(34px,5vw,72px)] font-semibold text-[#F4F1EA] leading-[0.95] tracking-wide">
+      <div ref={headlineRef} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[86vw] lg:w-[46vw] text-center z-[3] px-4 lg:px-0">
+        <h2 className="font-serif text-[clamp(34px,8vw,72px)] font-semibold text-[#F4F1EA] leading-[1.05] tracking-wide">
           The world is waiting.
         </h2>
-        <p className="mt-6 text-[clamp(13px,1.2vw,17px)] text-[#B8B2A6] leading-relaxed max-w-[36vw] mx-auto">
+        <p className="mt-6 text-[clamp(15px,1.2vw,17px)] text-[#B8B2A6] leading-relaxed max-w-[80vw] lg:max-w-[36vw] mx-auto">
           Bespoke itineraries, curated stays, and seamless journeys - crafted around you.
         </p>
       </div>
