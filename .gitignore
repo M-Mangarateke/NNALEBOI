@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Agent
+.agent/
+
+# Claude
+.claude/
+
+# Reference app
+public/Kimi-Reference/
+
+# Unused videos
+public/Gallery/videos/NNALEBOI-Video-01.mp4
+public/Gallery/videos/NNALEBOI-Video-02.mp4
+public/Gallery/videos/NNALEBOI-Video-06.mp4
