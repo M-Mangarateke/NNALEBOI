@@ -8,6 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
 // ── Real gallery images from /public/Gallery/images/ ──────────────────────────
 const carouselImages = [
   { src: '/Gallery/images/NNALEBOI-Gallery-09.webp', label: 'Gallery', caption: 'Handpicked Stays' },
+  { src: '/Gallery/images/NNALEBOI-Gallery-16.webp', label: 'Gallery', caption: 'Adventure Awaits' },
+  { src: '/Gallery/images/NNALEBOI-Gallery-17.webp', label: 'Gallery', caption: 'Sun & Splash' },
   { src: '/Gallery/images/NNALEBOI-Gallery-10.webp', label: 'Gallery', caption: 'Tailored For You' },
   { src: '/Gallery/images/NNALEBOI-Gallery-05.webp', label: 'Gallery', caption: 'Unforgettable Moments' },
   { src: '/Gallery/images/NNALEBOI-Gallery-03.webp', label: 'Gallery', caption: 'Seamless Journeys' },
@@ -22,8 +24,6 @@ const carouselImages = [
   { src: '/Gallery/images/NNALEBOI-Gallery-13.webp', label: 'Gallery', caption: 'Luxury Redefined' },
   { src: '/Gallery/images/NNALEBOI-Gallery-14.webp', label: 'Gallery', caption: 'Every Detail Matters' },
   { src: '/Gallery/images/NNALEBOI-Gallery-15.webp', label: 'Gallery', caption: 'Start Your Journey' },
-  { src: '/Gallery/images/NNALEBOI-Gallery-16.webp', label: 'Gallery', caption: 'Adventure Awaits' },
-  { src: '/Gallery/images/NNALEBOI-Gallery-17.webp', label: 'Gallery', caption: 'Sun & Splash' },
   { src: '/Gallery/images/NNALEBOI-Gallery-18.webp', label: 'Gallery', caption: 'Family Getaways' },
   { src: '/Gallery/images/NNALEBOI-Gallery-19.webp', label: 'Gallery', caption: 'Living The Dream' },
 ];
