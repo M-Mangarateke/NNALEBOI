@@ -53,7 +53,7 @@ const MediaShowcase = () => {
       section.querySelectorAll('.reveal-on-scroll').forEach((el) => {
         gsap.fromTo(el, { y: '6vh', opacity: 0 }, {
           y: 0, opacity: 1,
-          scrollTrigger: { trigger: el, start: 'top 85%', end: 'top 60%', scrub: window.innerWidth < 1024 ? 1.5 : true },
+          scrollTrigger: { trigger: el, start: 'top 85%', end: 'top 60%', scrub: true },
         });
       });
     }, section);

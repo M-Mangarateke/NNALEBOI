@@ -35,13 +35,13 @@ const Testimonials = () => {
     const ctx = gsap.context(() => {
       gsap.fromTo([labelRef.current, headingRef.current], { y: '6vh', opacity: 0 }, {
         y: 0, opacity: 1, stagger: 0.1,
-        scrollTrigger: { trigger: section, start: 'top 80%', end: 'top 50%', scrub: window.innerWidth < 1024 ? 1.5 : true },
+        scrollTrigger: { trigger: section, start: 'top 80%', end: 'top 50%', scrub: true },
       });
       cardsRef.current.forEach((card) => {
         if (!card) return;
         gsap.fromTo(card, { y: '8vh', opacity: 0 }, {
           y: 0, opacity: 1,
-          scrollTrigger: { trigger: card, start: 'top 85%', end: 'top 60%', scrub: window.innerWidth < 1024 ? 1.5 : true },
+          scrollTrigger: { trigger: card, start: 'top 85%', end: 'top 60%', scrub: true },
         });
       });
     }, section);

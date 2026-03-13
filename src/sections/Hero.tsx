@@ -34,11 +34,14 @@ const Hero = () => {
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: isMobile ? '+=80%' : '+=130%',
+          end: isMobile ? '+=60%' : '+=130%',
           pin: true,
-          scrub: isMobile ? 1.5 : 0.5,
-          anticipatePin: 1,
+          scrub: 0.5,
           refreshPriority: 2,
+          onLeaveBack: () => {
+            gsap.set([wordmarkRef.current, subheadlineRef.current, taglineRef.current, labelRef.current, lineRef.current, ctaRef.current], { opacity: 1, x: 0, y: 0 });
+            gsap.set(bgRef.current, { scale: 1, y: 0 });
+          },
         },
       });
       scrollTl

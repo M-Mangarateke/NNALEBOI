@@ -27,18 +27,18 @@ const Destinations = () => {
     const ctx = gsap.context(() => {
       gsap.fromTo([labelRef.current, headingRef.current], { y: '6vh', opacity: 0 }, {
         y: 0, opacity: 1, stagger: 0.1,
-        scrollTrigger: { trigger: section, start: 'top 80%', end: 'top 50%', scrub: window.innerWidth < 1024 ? 1.5 : true },
+        scrollTrigger: { trigger: section, start: 'top 80%', end: 'top 50%', scrub: true },
       });
       const listItems = listRef.current?.querySelectorAll('.destination-item');
       listItems?.forEach((item) => {
         gsap.fromTo(item, { x: '-8vw', opacity: 0 }, {
           x: 0, opacity: 1,
-          scrollTrigger: { trigger: item, start: 'top 85%', end: 'top 60%', scrub: window.innerWidth < 1024 ? 1.5 : true },
+          scrollTrigger: { trigger: item, start: 'top 85%', end: 'top 60%', scrub: true },
         });
       });
       gsap.fromTo(imageRef.current, { x: '10vw', scale: 1.04, opacity: 0 }, {
         x: 0, scale: 1, opacity: 1,
-        scrollTrigger: { trigger: section, start: 'top 70%', end: 'top 30%', scrub: window.innerWidth < 1024 ? 1.5 : true },
+        scrollTrigger: { trigger: section, start: 'top 70%', end: 'top 30%', scrub: true },
       });
     }, section);
     return () => ctx.revert();
