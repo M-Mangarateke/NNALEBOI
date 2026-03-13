@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navigation from './sections/Navigation';
 import Hero from './sections/Hero';
 import Discover from './sections/Discover';
@@ -16,6 +17,12 @@ import TermsOfService from './sections/TermsOfService';
 function App() {
   const [showPrivacy, setShowPrivacy] = useState(false);
   const [showTerms, setShowTerms] = useState(false);
+
+  useEffect(() => {
+    const onLoad = () => ScrollTrigger.refresh();
+    window.addEventListener('load', onLoad);
+    return () => window.removeEventListener('load', onLoad);
+  }, []);
 
   return (
     <div className="relative">
