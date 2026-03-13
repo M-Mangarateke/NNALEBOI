@@ -37,7 +37,6 @@ const Hero = () => {
           end: isMobile ? '+=60%' : '+=130%',
           pin: true,
           scrub: 0.5,
-          refreshPriority: 2,
           onLeaveBack: () => {
             gsap.set([wordmarkRef.current, subheadlineRef.current, taglineRef.current, labelRef.current, lineRef.current, ctaRef.current], { opacity: 1, x: 0, y: 0 });
             gsap.set(bgRef.current, { scale: 1, y: 0 });
