@@ -15,7 +15,9 @@
     <meta property="og:url" content="https://nnaleboi.co.za/" />
     <meta property="og:title" content="NNALEBOI Travel | Connecting Your World" />
     <meta property="og:description" content="Bespoke luxury travel agency in South Africa. Holiday packages, cruise holidays, honeymoon experiences, flights, and safari adventures crafted around you." />
-    <meta property="og:image" content="https://nnaleboi.co.za/images/cruise_caribbean.jpg" />
+    <meta property="og:image" content="https://nnaleboi.co.za/images/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="NNALEBOI Travel" />
 
     <!-- Twitter -->
@@ -23,22 +25,32 @@
     <meta name="twitter:url" content="https://nnaleboi.co.za/" />
     <meta name="twitter:title" content="NNALEBOI Travel | Connecting Your World" />
     <meta name="twitter:description" content="Bespoke luxury travel agency in South Africa. Holiday packages, cruise holidays, honeymoon experiences, and safari adventures." />
-    <meta name="twitter:image" content="https://nnaleboi.co.za/images/cruise_caribbean.jpg" />
+    <meta name="twitter:image" content="https://nnaleboi.co.za/images/og-image.jpg" />
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-    <!-- Structured Data - Local Business -->
+    <!-- Structured Data - Travel Agency -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "TravelAgency",
       "name": "NNALEBOI Travel",
       "url": "https://nnaleboi.co.za",
-      "logo": "https://nnaleboi.co.za/Brand/NNALEBOILogo.png",
-      "image": "https://nnaleboi.co.za/images/cruise_caribbean.jpg",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://nnaleboi.co.za/Brand/NNALEBOILogo.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": [
+        "https://nnaleboi.co.za/images/og-image.jpg",
+        "https://nnaleboi.co.za/images/cruise_caribbean.jpg",
+        "https://nnaleboi.co.za/images/destinations_feature.jpg",
+        "https://nnaleboi.co.za/images/dest_kruger.jpg"
+      ],
       "description": "Bespoke luxury travel agency in South Africa offering holiday packages, cruise holidays, honeymoon experiences, flights, and safari adventures.",
       "foundingDate": "2025-09",
       "slogan": "Connecting Your World",
@@ -48,6 +60,17 @@
       },
       "serviceType": ["Holiday Packages", "Cruise Holidays", "Honeymoon Experiences", "Flights & Accommodation", "Safari Tours", "Group Travel"],
       "sameAs": []
+    }
+    </script>
+
+    <!-- Structured Data - WebSite (enables sitelinks search) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "NNALEBOI Travel",
+      "alternateName": ["NNALEBOI", "nnaleboi"],
+      "url": "https://nnaleboi.co.za"
     }
     </script>
   </head>
