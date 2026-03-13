@@ -22,6 +22,10 @@ const carouselImages = [
   { src: '/Gallery/images/NNALEBOI-Gallery-13.webp', label: 'Gallery', caption: 'Luxury Redefined' },
   { src: '/Gallery/images/NNALEBOI-Gallery-14.webp', label: 'Gallery', caption: 'Every Detail Matters' },
   { src: '/Gallery/images/NNALEBOI-Gallery-15.webp', label: 'Gallery', caption: 'Start Your Journey' },
+  { src: '/Gallery/images/NNALEBOI-Gallery-16.webp', label: 'Gallery', caption: 'Adventure Awaits' },
+  { src: '/Gallery/images/NNALEBOI-Gallery-17.webp', label: 'Gallery', caption: 'Sun & Splash' },
+  { src: '/Gallery/images/NNALEBOI-Gallery-18.webp', label: 'Gallery', caption: 'Family Getaways' },
+  { src: '/Gallery/images/NNALEBOI-Gallery-19.webp', label: 'Gallery', caption: 'Living The Dream' },
 ];
 
 // ── Real client videos from /public/Gallery/videos/ ──────────────────────────
