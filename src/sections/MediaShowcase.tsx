@@ -26,9 +26,9 @@ const carouselImages = [
 
 // ── Real client videos from /public/Gallery/videos/ ──────────────────────────
 const videos = [
-  '/Gallery/videos/NNALEBOI-Video-03.mp4',
-  '/Gallery/videos/NNALEBOI-Video-04.mp4',
   '/Gallery/videos/NNALEBOI-Video-05.mp4',
+  '/Gallery/videos/NNALEBOI-Video-04.mp4',
+  '/Gallery/videos/NNALEBOI-Video-03.mp4',
 ];
 
 const MediaShowcase = () => {
