@@ -28,13 +28,14 @@ const Hero = () => {
   useLayoutEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
+    const isMobile = window.innerWidth < 1024;
+    if (isMobile) return;
     const ctx = gsap.context(() => {
-      const isMobile = window.innerWidth < 1024;
       const scrollTl = gsap.timeline({
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: isMobile ? '+=60%' : '+=130%',
+          end: '+=130%',
           pin: true,
           scrub: 0.5,
           onLeaveBack: () => {
@@ -49,7 +50,7 @@ const Hero = () => {
         .fromTo(ctaRef.current, { x: 0, opacity: 1 }, { x: '10vw', opacity: 0, ease: 'power2.in' }, 0.7)
         .fromTo(bgRef.current, { scale: 1, y: 0 }, { scale: 1.06, y: '-3vh', ease: 'none' }, 0.7);
     }, section);
-    return () => ctx.revert();
+    return () => ctx?.revert();
   }, []);
 
   return (
