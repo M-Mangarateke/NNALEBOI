@@ -34,11 +34,11 @@ const Inquiry = () => {
     const ctx = gsap.context(() => {
       gsap.fromTo(formRef.current, { x: '-8vw', opacity: 0 }, {
         x: 0, opacity: 1,
-        scrollTrigger: { trigger: section, start: 'top 80%', end: 'top 40%', scrub: true },
+        scrollTrigger: { trigger: section, start: 'top 80%', end: 'top 40%', scrub: window.innerWidth < 1024 ? 1.5 : true },
       });
       gsap.fromTo(imageRef.current, { x: '10vw', opacity: 0 }, {
         x: 0, opacity: 1,
-        scrollTrigger: { trigger: section, start: 'top 70%', end: 'top 30%', scrub: true },
+        scrollTrigger: { trigger: section, start: 'top 70%', end: 'top 30%', scrub: window.innerWidth < 1024 ? 1.5 : true },
       });
     }, section);
     return () => ctx.revert();

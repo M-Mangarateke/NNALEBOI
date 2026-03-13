@@ -20,7 +20,7 @@ const Discover = () => {
     const ctx = gsap.context(() => {
       const isMobile = window.innerWidth < 1024;
       const scrollTl = gsap.timeline({
-        scrollTrigger: { trigger: section, start: 'top top', end: isMobile ? '+=60%' : '+=130%', pin: true, scrub: 0.5, refreshPriority: 1 },
+        scrollTrigger: { trigger: section, start: 'top top', end: isMobile ? '+=80%' : '+=130%', pin: true, scrub: isMobile ? 1.5 : 0.5, anticipatePin: 1, refreshPriority: 1 },
       });
 
       scrollTl

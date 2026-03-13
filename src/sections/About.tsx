@@ -20,7 +20,7 @@ const About = () => {
     if (!section) return;
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
-        scrollTrigger: { trigger: section, start: 'top 80%', end: 'top 30%', scrub: true },
+        scrollTrigger: { trigger: section, start: 'top 80%', end: 'top 30%', scrub: window.innerWidth < 1024 ? 1.5 : true },
       });
       tl.fromTo([labelRef.current, lineRef.current], { x: '-6vw', opacity: 0 }, { x: 0, opacity: 1 })
         .fromTo(headingRef.current, { y: '8vh', opacity: 0 }, { y: 0, opacity: 1 }, 0.1)
@@ -31,7 +31,7 @@ const About = () => {
 
       gsap.to(primaryImageRef.current, {
         y: '-2vh', ease: 'none',
-        scrollTrigger: { trigger: section, start: 'top bottom', end: 'bottom top', scrub: true },
+        scrollTrigger: { trigger: section, start: 'top bottom', end: 'bottom top', scrub: window.innerWidth < 1024 ? 1.5 : true },
       });
     }, section);
     return () => ctx.revert();

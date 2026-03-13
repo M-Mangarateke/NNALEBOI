@@ -17,7 +17,7 @@ const Cruises = () => {
     if (!section) return;
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
-        scrollTrigger: { trigger: section, start: 'top 80%', end: 'top 30%', scrub: true },
+        scrollTrigger: { trigger: section, start: 'top 80%', end: 'top 30%', scrub: window.innerWidth < 1024 ? 1.5 : true },
       });
       tl.fromTo([labelRef.current, headingRef.current], { y: '8vh', opacity: 0 }, { y: 0, opacity: 1, stagger: 0.1 })
         .fromTo(bodyRef.current, { y: '6vh', opacity: 0 }, { y: 0, opacity: 1 }, 0.15)

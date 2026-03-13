@@ -30,13 +30,13 @@ const Services = () => {
     const ctx = gsap.context(() => {
       gsap.fromTo([labelRef.current, headingRef.current], { y: '6vh', opacity: 0 }, {
         y: 0, opacity: 1, stagger: 0.1,
-        scrollTrigger: { trigger: section, start: 'top 80%', end: 'top 50%', scrub: true },
+        scrollTrigger: { trigger: section, start: 'top 80%', end: 'top 50%', scrub: window.innerWidth < 1024 ? 1.5 : true },
       });
       cardsRef.current.forEach((card) => {
         if (!card) return;
         gsap.fromTo(card, { y: '10vh', scale: 0.98, opacity: 0 }, {
           y: 0, scale: 1, opacity: 1,
-          scrollTrigger: { trigger: card, start: 'top 85%', end: 'top 55%', scrub: true },
+          scrollTrigger: { trigger: card, start: 'top 85%', end: 'top 55%', scrub: window.innerWidth < 1024 ? 1.5 : true },
         });
       });
     }, section);

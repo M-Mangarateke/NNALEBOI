@@ -16,7 +16,7 @@ const Footer = ({ onPrivacy, onTerms }: FooterProps) => {
     const ctx = gsap.context(() => {
       gsap.fromTo(footer, { y: '4vh', opacity: 0 }, {
         y: 0, opacity: 1,
-        scrollTrigger: { trigger: footer, start: 'top 90%', end: 'top 70%', scrub: true },
+        scrollTrigger: { trigger: footer, start: 'top 90%', end: 'top 70%', scrub: window.innerWidth < 1024 ? 1.5 : true },
       });
     }, footer);
     return () => ctx.revert();
